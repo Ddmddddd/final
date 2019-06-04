@@ -1,0 +1,15 @@
+page {
+  background-color: white
+}
+.loading_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading_container > image {
+  margin-top: 100px;
+  width: 540rpx;
+  height: 540rpx;
+}

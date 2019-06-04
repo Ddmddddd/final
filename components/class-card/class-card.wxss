@@ -1,0 +1,40 @@
+/* components/class-card/class-card.wxss */
+.class-card{
+  width: 590rpx;
+  height: auto;
+  font-size: 36rpx;
+  padding: 30rpx;
+  margin-left: 50rpx;
+  margin-bottom: 40rpx;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #aaa;
+  box-shadow: 0px 0px 3px 1px  #aaa ;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.class-card-title{
+  font-weight: 600;
+  font-size: 44rpx;
+}
+
+.class-card > button {
+  width: 300rpx;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  margin-left: 300rpx;
+  margin-top: 10rpx;
+  color: white;
+}
+
+.class-card > .class_card_unlearn {
+  background-color: #1E90FF;
+  border: 1px solid #1E90FF;
+}
+.class-card > .class_card_learned {
+  background-color: #2E8B57;
+  border: 1px solid #2E8B57;
+}

@@ -1,0 +1,56 @@
+<!--pages/result/riskfactor/riskfactor.wxml-->
+<view class='container'>
+  <view wx:if="{{smoke==1}}" class='tips'>
+    <view class='title'>
+      <view class='titletext'>抽烟</view>
+      <view class='index'>{{index+smoke}}</view>
+    </view>
+    <view class='source'>抽烟对于各种慢性疾病的发病和死亡显著相关。</view>
+  </view>
+  <view wx:if="{{drink==1}}" class='tips'>
+    <view class='title'>
+      <view class='titletext'>饮酒</view>
+      <view class='index'>{{index+smoke+drink}}</view>
+    </view>
+    <view class='source'>大量（过量）饮酒与慢病发病密切相关。</view>
+  </view>
+  <view wx:if="{{bmi==1}}" class='tips'>
+    <view class='title'>
+      <view class='titletext'>超重</view>
+      <view class='index'>{{index+smoke+drink+bmi}}</view>
+    </view>
+    <view class='source'>超重或肥胖是造成高血压以及其他疾病的重要危险因素。</view>
+  </view>
+  <view wx:if="{{bp==1}}" class='tips'>
+    <view class='title'>
+      <view class='titletext'>高血压</view>
+      <view class='index'>{{index+smoke+drink+bmi+bp}}</view>
+    </view>
+    <view class='source'>高血压是心血管病最重要的独立风险因素。</view>
+  </view>
+  <view wx:if="{{tc==1}}" class='tips'>
+    <view class='title'>
+      <view class='titletext1'>血总胆固</view>
+      <view class='titletext1'>醇异常</view>
+      <view class='index'>{{index+smoke+drink+bmi+bp+tc}}</view>
+    </view>
+    <view class='source'>该指标异常的主要危害是引起冠心病等其他心血管疾病。</view>
+  </view>
+  <view wx:if="{{Hdlc==1}}" class='tips'>
+    <view class='title1'>
+      <view class='titletext2'>高密度脂蛋白</view>
+      <view class='titletext2'>胆固醇异常</view>
+      <view class='index'>{{index+smoke+drink+bmi+bp+tc+Hdlc}}</view>
+    </view>
+    <view class='source'>该指标过低对于慢病的发病有一定的风险。</view>
+  </view>
+  <view wx:if="{{dia==1}}" class='tips'>
+    <view class='title2'>
+      <view class='titletext'>糖尿病</view>
+      <view class='index'>{{index+smoke+drink+bmi+bp+tc+Hdlc+dia}}</view>
+    </view>
+    <view class='source'>在中国人群中，糖尿病是冠心病和脑卒中发病的独立危险因素，相对危险仅次于高血压。</view>
+  </view>
+
+<view class='inform'>我们已经向您的管理医生发送了您此次的评估内容与结果，他会尽快根据您的实际情况为您提供合适的疾病管理方案，请及时关注我们的小程序。</view>
+</view>

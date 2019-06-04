@@ -1,0 +1,73 @@
+<!--pages/erecord/erecord.wxml-->
+<view class="table">
+        <view class="tr">
+            <view class="th">指标</view>
+            <view class="th">具体值</view>
+            <view class="th">风险</view>
+        </view>
+        <view class="tr">
+            <view class="td">是否吸烟</view>
+            <view class="td">{{information.smoke}}</view>
+            <view class="td">/</view>
+        </view>
+        <view class="tr">
+            <view class="td">是否饮酒</view>
+            <view class="td">{{information.drink}}</view>
+            <view class="td">/</view>
+        </view>
+        <view class="tr">
+            <view class="td">身高</view>
+            <view class="td">{{information.height}}cm</view>
+            <view class="td">/</view>
+        </view>
+        <view class="tr">
+            <view class="td">体重</view>
+            <view class="td">{{information.weight}}kg</view>
+            <view class="td">/</view>
+        </view> 
+        <view class="tr">
+            <view class="td">体重指数</view>
+            <view class="td">{{information.bmi}}</view>
+            <view class="td">{{risk.bmi}}</view>
+        </view>
+        <view class="tr">
+            <view class="td">收缩压</view>
+            <view class="td">{{information.sbp}}mmHg</view>
+            <view class="td">{{risk.sbp}}</view>
+        </view>
+        <view class="tr">
+            <view class="td">糖尿病</view>
+            <view class="td">{{information.dia}}</view>
+            <view class="td">{{risk.dia}}</view>
+        </view>
+        <view class="tr">
+            <view class="td">血总胆固醇</view>
+            <view class="td">{{information.tc}}mmol/L</view>
+            <view class="td">{{risk.tc}}</view>
+        </view>
+        <view class="tr">
+            <view class="td">高密度脂蛋白胆固醇</view>
+            <view class="td">{{information.Hdlc}}mmol/L</view>
+            <view class="td">{{risk.Hdlc}}</view>
+        </view>
+    </view>
+    <view class='lead'>
+	  <image src="../../image/leadto.png" mode="aspectFit" style="width:100%;height:100%;"></image>
+  </view>
+<view class='resulttitle'>三种不同评估模型的评估结果</view>
+  <view class='threemode'>
+    <view class='modetype'>
+      <view class='modetitle'>WHO模型</view>
+      <view class='moderesult'>{{wrisk}}</view>
+    </view>
+    <view class='modetype'>
+      <view class='modetitle'>弗兰明翰模型</view>
+      <view class='moderesult'>{{frisk}}%</view>
+    </view>
+    <view class='modetype'>
+      <view class='modetitle'>ICVD模型</view>
+      <view class='moderesult'>{{irisk}}%</view>
+    </view>
+  </view>
+
+  <button class='advise' bindtap='start' type='warn'>查看具体风险因素</button>

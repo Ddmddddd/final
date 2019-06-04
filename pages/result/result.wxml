@@ -1,0 +1,35 @@
+<!--pages/result/result.wxml-->
+<view class='container'>
+  <view class='title'>三种不同评估模型的评估结果</view>
+  <view class='threemode'>
+    <view class='modetype'>
+      <view class='modetitle'>WHO模型</view>
+      <view class='moderesult'>{{wrisk}}</view>
+    </view>
+    <view class='modetype'>
+      <view class='modetitle'>弗兰明翰模型</view>
+      <view class='moderesult'>{{frisk}}%</view>
+    </view>
+    <view class='modetype'>
+      <view class='modetitle'>ICVD模型</view>
+      <view class='moderesult'>{{irisk}}%</view>
+    </view>
+  </view>
+  <view class='lead'>
+	  <image src="../../image/leadto.png" mode="aspectFit" style="width:100%;height:100%;"></image>
+  </view>
+  <view class='totaltitle'>综合风险</view>
+  <view class='totalresult'>{{totalrisk}}</view>
+
+  <view class='risktitle'>您目前的风险因素如下：</view>
+  <view class='riskitem'>{{factortbc}}</view>
+  <view class='riskitem'>{{factorsmoke}}</view>
+  <view class='riskitem'>{{factorHdlc}}</view>
+  <view class='riskitem'>{{factorsbp}}</view>
+  <view class='riskitem'>{{factordiabetes}}</view>
+  <view class='riskitem'>{{factorbmi}}</view>
+  <view class='riskitem'>{{factordrink}}</view>
+
+  <button class='advise' bindtap='start' type='warn'>查看具体风险因素</button>
+  <button bindtap='know' type='primary'>已知晓</button>
+</view>

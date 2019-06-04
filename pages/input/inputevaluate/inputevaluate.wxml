@@ -1,0 +1,187 @@
+<!--pages/input/inputevaluate/inputevaluate.wxml-->
+<view class='container'>
+  <view class='item' bindtap='sdrink'>
+    <view class="paddinghalfrem card-content">
+      <image wx:if="{{drinklab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
+        <text class='texttitle4'>是否饮酒</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showdrink}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showdrink}}">
+    <view class="modal-title">是否饮酒</view>
+    <view class='paddinghalfrem card-content'>
+     <radio-group class='radio-group' bindchange='inputdrink'>
+      <radio  class='weui-cell_switch' value='饮酒'/><view class='switch-text'>饮酒</view>
+      <radio  class='weui-cell_switch' value='不饮酒'/><view class='switch-text'>不饮酒</view>
+      </radio-group>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="confirmdrink">确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='ssmoke'>
+    <view class="paddinghalfrem card-content">
+      <image wx:if="{{smokelab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
+        <text class='texttitle4'>是否吸烟</text>
+    </view>
+  </view>
+
+    <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showsmoke}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showsmoke}}">
+    <view class="modal-title">是否吸烟</view>
+    <view class='paddinghalfrem card-content'>
+     <radio-group class='radio-group' bindchange='inputsmoke'>
+      <radio  class='weui-cell_switch' value='吸烟'/><view class='switch-text'>吸烟</view>
+      <radio  class='weui-cell_switch' value='不吸烟'/><view class='switch-text'>不吸烟</view>
+      </radio-group>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap='confirmsmoke'>确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='sdiabetes'>
+    <view class="paddinghalfrem card-content">
+      <image wx:if="{{diabeteslab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
+        <text class='texttitle'>有无糖尿病</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showdiabetes}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showdiabetes}}">
+    <view class="modal-title">有无糖尿病</view>
+    <view class='paddinghalfrem card-content'>
+     <radio-group class='radio-group' bindchange='inputdiabetes'>
+      <radio  class='weui-cell_switch' value='有糖尿病'/><view class='switch-text'>有糖尿病</view>
+      <radio  class='weui-cell_switch' value='无糖尿病'/><view class='switch-text'>无糖尿病</view>
+      </radio-group>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap='confirmdiabetes'>确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='stbc'>
+    <view class="paddinghalfrem card-content">
+      <image wx:if="{{tbclab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
+        <text class='texttitle'>血总胆固醇</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showtbc}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showtbc}}">
+    <view class="modal-title">血总胆固醇</view>
+    <view class='paddinghalfrem card-content'>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text"  bindinput="inputtbc" class="input" placeholder="单位mmol/L"></input>
+    </view>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap='confirmtbc'>确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='sHdlc'>
+    <view class="paddinghalfrem card-content">
+      <image wx:if="{{Hdlclab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
+        <text class='texttitle2'>高密度脂蛋白胆固醇</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showHdlc}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showHdlc}}">
+    <view class="modal-title">高密度脂蛋白胆固醇</view>
+    <view class='paddinghalfrem card-content'>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text"  bindinput="inputHdlc" class="input" placeholder="单位mmol/L"></input>
+    </view>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap='confirmHdlc'>确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='sSBP'>
+    <view class="paddinghalfrem card-content">
+      <image wx:if="{{SBPlab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
+        <text class='texttitle5'>收缩压</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showSBP}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showSBP}}">
+    <view class="modal-title">收缩压</view>
+    <view class='paddinghalfrem card-content'>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text"  bindinput="inputSBP" class="input" placeholder="单位mmHg"></input>
+    </view>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap='confirmSBP'>确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='sBweight'>
+    <view class="paddinghalfrem card-content">
+      <image wx:if="{{Bweightlab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
+        <text class='texttitle3'>体重</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showBweight}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showBweight}}">
+    <view class="modal-title">体重</view>
+    <view class='paddinghalfrem card-content'>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text"  bindinput="inputBweight" class="input" placeholder="单位kg"></input>
+    </view>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap='confirmBweight'>确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='sphy'>
+    <view class="paddinghalfrem card-content">
+      <image wx:if="{{phylab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
+        <text class='texttitle4'>心理状况</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showphy}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showphy}}">
+    <view class="modal-title">请问您是否有意图或已经在改变自己的生活方式？</view>
+     <radio-group class='radio-group' bindchange='inputphy'>
+    <view class='paddinghalfrem phy-content'>
+    <view class='card-content'>
+      <radio  class='weui-cell_switch' value='无'/><view class='switch-text'>无</view></view>
+       <view class='card-content'><radio  class='weui-cell_switch' value='有意图'/><view class='switch-text'>有意图</view></view>
+       <view class='card-content'><radio  class='weui-cell_switch' value='有准备'/><view class='switch-text'>有准备</view></view>
+       <view class='card-content'><radio  class='weui-cell_switch' value='已在改变'/><view class='switch-text'>已在改变</view></view>
+      </view>
+      </radio-group>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="confirmphy">确定</view>
+   </view>
+  </view>
+
+  <button bindtap='finishevaluate' class='finish-button' type='primary'>完成</button>
+</view>

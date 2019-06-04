@@ -1,0 +1,48 @@
+<!--pages/setting/setting.wxml-->
+
+<view class='bindwx_container'>
+  
+
+  <view class="login_content">
+    <view id="bindwx_info_header">
+      <text>请输入您的账号密码以绑定微信</text>
+    </view>
+    <view class="login">
+      <view class="weui-cell__hd">
+        <view class="weui-label">账号</view>
+      </view>
+      <view class="weui-cell__bd login-username">
+        <input class='weui-input' type="text" bindinput="userNameInput" value="{{userName}}" />
+      </view>
+    </view>
+    <view class="login">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd login-password">
+        <input value="{{userPassword}}"
+        class='weui-input' type="text" bindinput="userPasswordInput" password="{{!showPsw}}" />
+        <image src="{{ showPsw ? '/image/open-eyes.png' : '/image/close-eyes.png' }}" bindtap="switchShowPassword"></image>
+      </view>
+    </view>
+
+    <view wx:if="{{!iv}}" class='index_btn'>
+      <button
+        open-type="getUserInfo" 
+        lang="zh_CN"
+        bindgetuserinfo="wxLogin"
+      >
+        绑定账号
+      </button>
+    </view>
+
+    <view wx:else class='index_btn'>
+      <button
+        bindtap="bindAndLogin"
+      >
+        绑定
+      </button>
+    </view>
+  </view>
+
+</view>

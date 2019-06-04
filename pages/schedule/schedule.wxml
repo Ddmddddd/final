@@ -1,0 +1,93 @@
+<view wx:if="{{roleType > 0}}">
+  <view class="list">
+    <view class="list-title">
+      <text>今日计划</text>
+      <text>Schedule</text>
+    </view>
+
+    <view
+      wx:for="{{scheduleList}}"
+      wx:for-index="key"
+      wx:for-item="value"
+      wx:key="index"
+      class="list-item animated fadeIn fast"
+    >
+      <text class="key">{{key}}</text>
+
+      <view>
+        <view
+          class="list-item-detail" 
+          wx:for="{{value}}"
+          wx:for-item="item" 
+          wx:key="{{item.id}}"
+        >
+          <view class="list_item_text">
+            <text>{{item.detail}}</text>
+          </view>
+          <view class="schedult_opt_bar">
+            <view class="complete_button" bindtap="finishSchedule" data-completeid="{{item.id}}">
+              <image src="../../image/correct.png" style=""/>
+              <text>完成</text>
+            </view>
+            <view class="ignore_button" bindtap="ignoreSchedule" data-ignoreid="{{item.id}}">
+              <image src="../../image/ignore.png" style="width:40rpx;height:40rpx"/>
+              <text>忽略</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="list">
+    <view style='border-color: #32cd32;background-color: rgba(50, 205, 50, 0.65);' 
+    class="list-title">
+      <text>已完成计划</text>
+      <text>Finished</text>
+    </view>
+    <view
+      wx:for="{{completeList}}"
+      wx:for-index="key"
+      wx:for-item="value"
+      wx:key="{{item.id}}"
+      class="list-item finished animated fadeIn fast"
+    >
+      <text>{{key}}</text>
+      <view wx:for="{{value}}" 
+      wx:key="{{item.id}}"
+      class="list-item-detail "
+      bindtap="pendingSchedule"
+      data-pendingid="{{item.id}}">
+        {{item.detail}}
+      </view>
+    </view>
+  </view>
+
+  <view class="list">
+    <view style='border-color:#808080;background-color: rgba(128, 128, 128, 0.45);height:80rpx' 
+    class="list-title select {{selected?'':'closed'}}" bindtap="changeIgnoreShowStatus">
+      <text>已忽略</text>
+    </view>
+    <view wx:if="{{selected}}"
+      wx:for="{{ignoreList}}"
+      wx:for-index="key"
+      wx:for-item="value"
+      wx:key="{{item.id}}"
+      class="list-item animated fadeIn fast"
+    >
+      <text>{{key}}</text>
+      <view wx:for="{{value}}" 
+      wx:key="{{item.id}}"
+      class="list-item-detail"
+      bindtap="pendingSchedule"
+      data-pendingid="{{item.id}}">
+        {{item.detail}}
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class="empty_container" wx:if="{{roleType === 0}}">
+  <image src="../../../image/blank.png" style="width:35%" mode="aspectFit"/>
+  <text style="text-align:center">功能未开放</text>
+</view>

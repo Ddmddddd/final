@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "top-tabbar": "../../../components/top-tabbar/top-tabbar",
+    "class-card":"../../../components/class-card/class-card"
+  },
+  "navigationBarTitleText": "健康课堂"
+}

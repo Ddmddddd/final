@@ -1,0 +1,75 @@
+/* pages/result/riskfactor/riskfactor.wxss */
+.tips{
+  width: 90%;
+  display: flex;
+  border: 2px solid rgb(221, 65, 4);
+  box-shadow: rgba(243, 59, 3, 0.239) 0px 1px 6px 1px;
+  margin-bottom: 12rpx;
+  border-radius: 8px;
+  margin-left: 5%;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+.title{
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin-left: 13px;
+  height:80%;
+}
+.titletext{
+  color: #ff0003;
+  font-size: 28px;
+  font-family: "黑体";
+}
+.title1{
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin-left: 13px;
+  height:80%;
+  margin-top: 5px;
+}
+.titletext1{
+  color: #ff0003;
+  font-size: 20px;
+  font-family: "黑体";
+}
+.title2{
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin-left: 13px;
+  height:80%;
+  margin-top: 8px;
+}
+.titletext2{
+  color: #ff0003;
+  font-size: 13px;
+  font-family: "黑体";
+}
+
+.index{
+  color: #ff0003;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source{
+  font-size:15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin-left: 10%;
+}
+
+.inform{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 18px;
+  padding-bottom: 5px;
+}

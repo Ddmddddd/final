@@ -1,0 +1,18 @@
+<!--components/class-card/class-card.wxml-->
+<view class="class-card">
+    <view class="class-card-title">{{card.personalKno.title}}</view>
+    <view class="class-card-content">{{card.personalKno.content}}</view>
+    <button 
+        wx:if="{{card.status == 0}}"
+        bindtap="finishLearning"
+        class="class_card_unlearn"
+    >
+        点击完成学习
+    </button>
+    <!-- <view
+        wx:else
+        class="class_card_learned"
+    >
+        已学习
+    </view> -->
+</view>

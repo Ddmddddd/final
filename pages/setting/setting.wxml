@@ -1,0 +1,48 @@
+<!--pages/setting/setting.wxml-->
+
+<view class='container'>
+ <view class="weui-cells">
+    <navigator url="" class="weui-cell">
+      <view class='cell-icon'>
+        <image class='image-profile' mode='aspectFit' src="{{ avatarUrl ? avatarUrl : '../../image/anonymous_avatar.png'}}"></image>
+      </view>
+      <view class="cell-text">
+        <view class="title">{{nickname}}</view>
+        <view class="subtitle">{{patientid}}</view>
+      </view>
+    </navigator>
+  </view>
+
+    <view class="weui-cells__title" style='margin-top:100rpx;'></view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="../user/user" class="weui-cell weui-cell_input ">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <view class="weui-label">账号与安全</view>
+          </view>
+        </view>
+      </navigator>
+      <view class="weui-cell weui-cell_input" bindtap="gotoBindWx">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <view class="weui-label">
+              <text>绑定微信</text>
+              <text wx:if="{{bindWx}}" id="bindwx_status">（已绑定）</text>
+              <!-- <text wx:else id="unbindwx_status">（未绑定）</text> -->
+            </view>
+          </view>
+        </view>
+      </view>
+      <view bindtap='quit' class="weui-cell weui-cell_input ">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <view class="weui-label">退出</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+ 
+
+
+</view>

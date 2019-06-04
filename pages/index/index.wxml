@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class='login_container'>
+  <image mode="aspectFill" style="width:100vw;height:100vh" src="../../image/login4.jpg" />
+
+  <view class="login_content">
+    <view class="login">
+      <view class="weui-cell__hd">
+        <view class="weui-label">账号</view>
+      </view>
+      <view class="weui-cell__bd login-username">
+        <input class='weui-input' type="text" bindinput="userNameInput" />
+      </view>
+    </view>
+    <view class="login">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd login-password">
+        <input class='weui-input' type="text" bindinput="userPasswordInput" password="{{!showPsw}}" />
+        <image src="{{ showPsw ? '../../image/open-eyes.png' : '../../image/close-eyes.png' }}" bindtap="switchShowPassword"></image>
+      </view>
+    </view>
+
+    <view class='index_btn'>
+      <button style='color:white;background-color:lightskyblue' bindtap="doLogIn">账号登录</button>
+      <button 
+        id="wx_login_btn"
+        open-type="getUserInfo" 
+        lang="zh_CN"
+        bindgetuserinfo="wxLogin">
+        <image src="/image/weixin.jpeg" /><text>微信登录</text></button>
+      <view id="registe_account_view" bindtap="register">还没有账号？👉注册账号</view>
+    </view>
+  </view>
+</view>

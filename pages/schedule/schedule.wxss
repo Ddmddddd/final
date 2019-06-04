@@ -1,0 +1,179 @@
+page {
+    background-color: white;
+}
+
+.list {
+    margin-top: 40rpx;
+    margin-bottom: 15rpx;
+}
+
+.list-title {
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid #33ccff;
+    border-left-width: 10rpx;
+    border-bottom-right-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2% 0 2% 4%;
+    padding-left: 4%;
+    font-size: 28rpx;
+    background-color: rgba(51, 204, 255, 0.65);
+}
+
+.list-title :first-child {
+    font-weight: 600;
+    font-size: 40rpx;
+}
+
+.list-title :nth-child(2) {
+    line-height: 32rpx;
+}
+
+.list-item {
+    margin-left: 10%;
+    margin-top: 20rpx;
+    padding-right: 20rpx;
+}
+
+.list-item>text {
+    font-weight: 600;
+    position: relative;
+}
+
+.key:before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 10rpx solid #33ccff;
+    border-left: 10rpx solid #33ccff;
+    border-right: 10rpx solid #33ccff;
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.list-item-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.finished {
+    color: #aaa;
+    text-decoration: line-through black;
+}
+
+.finished>text ::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 10rpx solid #32cd32;
+    border-left: 10rpx solid #32cd32;
+    border-right: 10rpx solid #32cd32;
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* 计划列表中展示的内容和选项 */
+.list_item_text {
+    width: 70%;
+}
+
+.schedult_opt_bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30%;
+}
+
+.schedult_opt_bar > view
+{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.schedult_opt_bar > view > image {
+    width:40rpx;
+    height:40rpx
+}
+
+.schedult_opt_bar > view > text {
+    font-size: 28rpx;
+    line-height: 32rpx;
+}
+.ignore_button {
+    padding: 0 8rpx;
+    color: #999;
+}
+.complete_button {
+    padding: 8rpx;
+    color: green;
+}
+
+.select {
+    position: relative;
+    transition-duration: 300ms;
+}
+
+.select:after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 6px solid #eee;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.closed:after {
+    transform: rotate(-90deg);
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animated.fast {
+    animation-duration: 800ms;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.empty_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

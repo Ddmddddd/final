@@ -1,0 +1,15 @@
+@import '/pages/index/index.wxss';
+
+#bindwx_info_header {
+  width: 90%;
+  margin-bottom: 32rpx;
+  font-size: 20px;
+  text-align: center;
+}
+.login_content {
+  top: 100rpx;
+}
+.index_btn > button {
+  color:white;
+  background-color:lightskyblue;
+}

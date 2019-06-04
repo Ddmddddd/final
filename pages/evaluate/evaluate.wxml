@@ -1,0 +1,15 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='container'>
+  <navigator class='record-item' wx:if="{{evaluatelab}}" url='../erecord/erecord'>
+    <view class='record-item-add'>
+      <view class='add-icon.record'>√</view>
+      <view class='add-title.record'>查看上次评估记录</view>
+    </view>
+  </navigator>
+  <navigator class='record-item' url='../input/inputevaluate/inputevaluate'>
+    <view class='record-item-add'>
+      <view class='add-icon'>+</view>
+      <view class='add-title'>评估一次</view>
+    </view>
+  </navigator>
+</view>
